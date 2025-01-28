@@ -1,0 +1,32 @@
+.item-news {
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    flex-direction: column;
+}
+
+.news-img {
+    width: 100%; 
+    height: auto; 
+    max-width: 500px; 
+    min-width: 200px;
+}
+
+.news-title {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: 550;
+}
+
+
+
+.news-author {
+    display: flex;
+}
+
+.news-desc {
+    padding-top: 15px;
+    line-height: 2;
+    padding-bottom: 20px;
+}

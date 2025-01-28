@@ -1,16 +1,33 @@
+// Dynamically load the navbar HTML content into the #navbar div
 fetch('../navbar/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-    });
+.then(response => response.text())
+.then(data => {
+    document.getElementById('navbar').innerHTML = data;
+    
+    // Dynamically load the navbar CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'navbar/navbar.css';
+    document.head.appendChild(link);
+    
+    // Dynamically load the navbar JavaScript
+    const script = document.createElement('script');
+    script.src = 'navbar/navbar.js';
+    document.body.appendChild(script);
+})
+.catch(error => {
+    console.error('Error loading the navbar:', error);
+});
 
 function displayNews() {
     const newsTitle = localStorage.getItem('newsTitle');
     const newsDesc = localStorage.getItem('newsDesc');
+    const newsImg = localStorage.getItem('newsImg');
 
     document.title = newsTitle;
     document.getElementsByClassName('news-title')[0].textContent = newsTitle;
     document.getElementsByClassName('news-desc')[0].textContent = newsDesc;
+    document.getElementsByClassName('news-img')[0].setAttribute('src', newsImg);
 
     // localStorage.removeItem('newsTitle');
     // localStorage.removeItem('newsDesc');

@@ -95,11 +95,17 @@ body {
 .news-title {
     padding: 5px 10px;
     font-size: x-large;
+    font-weight: 550;
 }
 
 .news-desc {
     padding: 2px 10px;
     margin-bottom: 10px;
+    display: -webkit-box;      /* Enables the flexible box layout */
+    -webkit-line-clamp: 2;     /* Number of lines to show */
+    -webkit-box-orient: vertical; /* Specifies vertical box orientation */
+    overflow: hidden;          /* Hides overflowing text */
+    text-overflow: ellipsis;   /* Adds "..." for truncated text */
 }
 
 .trending-topics {
@@ -128,7 +134,10 @@ body {
     padding-top: 10px;
 }
 
-/* Actions section styles */
+.news-img {
+    display: none;
+}
+ 
 .actions {
     height: min-content;
     width: min-content;
