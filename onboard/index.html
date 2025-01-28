@@ -1,56 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>IndiaFlux - News On The Go</title>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-        <script src="https://accounts.google.com/gsi/client" async defer></script>
-    
-    </head>
-
-    <body>
-       
-        <div class="header">
-            <div class="left-items">
-                <div class="item-header">More Options</div>
-                <div class="item-header">Search</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaFlux - Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>IndiaFlux</h2>
+            <h3>Welcome Back</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="toggle-form">
+                <p>Don't have an account? <a href="#">Register</a></p>
             </div>
-           
         </div>
-    <div class = "center-container" >
-        <div class="login-container">
-            <div class="login-box">
-                <!-- <h1>IndiaFlux</h1> -->
-                <div class="center-title">IndiaFlux</div>
-                <form>
-                    <input type="text" placeholder="Phone number, username, or email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit" class="login-button">Log In</button>
-                </form>
-                <div class="divider">
-                    <span>OR</span>
-                </div>
-                <button class="facebook-login">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" alt="Facebook Icon" >
-                    Log in with Facebook
-                </button>
-                <a href="#" class="forgot-password">Forgot password?</a>
-            </div>
-            <div class="signup-box">
-                <p>Don't have an account? <a href="#">Sign up</a></p>
-            </div>
-            <div class="get-app">
-                <p>Get the app.</p>
-                <div class="app-stores">
-                    <img src="https://lh3.googleusercontent.com/AacbE2E3J2IF33yZcpFJP-NjD-HQtzgGbzm9xwseI2AZb6mC6bI9DWZELodL7G5m0WGofQB7P5I0Wae8jGJn50j0gbrp5R6F1EDNgIU7PqlrAPrPRAYS=s1000" alt="Google Play">
-                    
-                </div>
+        
+        <div class="form-container register-form">
+            <h2>IndiaFlux</h2>
+            <h3>Create an Account</h3>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <div class="toggle-form">
+                <p>Already have an account? <a href="#">Login</a></p>
             </div>
         </div>
     </div>
-    
-    </body>
+</body>
 </html>

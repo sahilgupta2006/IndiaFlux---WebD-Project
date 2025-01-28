@@ -16,13 +16,36 @@ fetch('navbar/navbar.html')
     console.error('Error loading the navbar:', error);
 });
 
-const divs = document.querySelectorAll('.item-news');
+const divs1 = document.querySelectorAll('.item-news');
 
-divs.forEach(div => {
+window.onload = function() {
+    const elements = document.querySelectorAll('.story-desc');
+    elements.forEach(function(element) {
+        element.style.display = 'none';
+    });
+}
+
+divs1.forEach(div => {
     div.onclick = function () {
         const title = this.querySelector('.news-title').textContent;
         const desc = this.querySelector('.news-desc').textContent;
         const img = this.querySelector('.news-img').textContent;
+        
+        localStorage.setItem('newsTitle', title);
+        localStorage.setItem('newsDesc', desc);
+        localStorage.setItem('newsImg', img);
+
+        window.location.href = "read/";
+    };
+});
+
+const divs2 = document.querySelectorAll('.item-story');
+
+divs2.forEach(div => {
+    div.onclick = function () {
+        const title = this.querySelector('.story-title').textContent;
+        const desc = this.querySelector('.story-desc').textContent;
+        const img = this.querySelector('.story-img').src;
         
         localStorage.setItem('newsTitle', title);
         localStorage.setItem('newsDesc', desc);
