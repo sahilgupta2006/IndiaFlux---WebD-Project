@@ -18,13 +18,6 @@ fetch('navbar/navbar.html')
 
 const divs1 = document.querySelectorAll('.item-news');
 
-window.onload = function() {
-    const elements = document.querySelectorAll('.story-desc');
-    elements.forEach(function(element) {
-        element.style.display = 'none';
-    });
-}
-
 divs1.forEach(div => {
     div.onclick = function () {
         const title = this.querySelector('.news-title').textContent;

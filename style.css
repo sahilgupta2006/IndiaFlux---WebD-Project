@@ -87,6 +87,10 @@ body {
     font-weight: 550;
 }
 
+.story-desc {
+    display: none;
+}
+
 .news-desc {
     padding: 2px 10px;
     margin-bottom: 10px;
